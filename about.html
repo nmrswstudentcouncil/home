@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา | NMRSWSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> 
+        body { font-family: 'Kanit', sans-serif; } 
+        /* คลาสสำหรับตัดคำให้สวยงามในส่วนประวัติ */
+        .history-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/happynewyear.png" 
+                             class="h-10 w-10 md:h-12 md:w-12 mr-3 object-contain" 
+                             alt="Logo">
+                        <span class="text-lg md:text-xl font-bold text-red-600 truncate max-w-[200px] md:max-w-none">
+                            NMRSW Student Council
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-red-600 transition">หน้าแรก</a>
+                    <a href="about.html" class="hover:text-red-600 transition">เกี่ยวกับเรา</a>
+                    <a href="news.html" class="hover:text-red-600 transition">ข่าวสาร</a>
+                    <a href="contact.html" class="hover:text-red-600 transition">ติดต่อเรา</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-100">
+           <a href="index.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">หน้าแรก</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">เกี่ยวกับเรา</a>
+            <a href="news.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ข่าวสาร</a>            
+            <a href="contact.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ติดต่อเรา</a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <header class="bg-red-700 py-12 text-center text-white">
+        <h1 class="text-4xl font-bold">เกี่ยวกับเรา</h1>
+        <p class="mt-2 text-red-100">รู้จักตัวตนและทีมงานคณะกรรมการนักเรียน</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 flex-grow">
+
+        <h2 class="text-3xl font-bold text-center mb-8">ทำเนียบคณะกรรมการนักเรียน ปี 2569</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/S__44302466.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.พนมแก้ว ภิญโญ</h3>
+                <p class="text-red-600 font-bold">ประธานนักเรียน</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/4</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----086ec1273848a4ec.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.กรฌ์ณภัทรส์ ธัญธนาโภคิน</h3>
+                <p class="text-red-600 font-bold">รองประธานนักเรียน</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/2</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/Untitled-design-10.png" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.วรฤทัย เพ่งพิศ</h3>
+                <p class="text-red-600 font-bold">รองประธานนักเรียน</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/4</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----2e7d41ed7478fef0.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ณิชาพร หวิงปัด</h3>
+                <p class="text-red-600 font-bold">เลขานุการ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/2</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/------11b123f900e33d362.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">นายศศิวัฒน์ เพชรอินทร์</h3>
+                <p class="text-red-600 font-bold">เหรัญญิก</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/3</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----597fa0e98788b8a5.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">นายปิยังกูร วิริยะวัฒนะ</h3>
+                <p class="text-red-600 font-bold">แผนงานและนโยบาย</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/2</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/----3f8b70f2ca490d58.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.พัทธ์ธีรา คีรีเนรมิตร</h3>
+                <p class="text-red-600 font-bold">ประเมินและประกันคุณภาพ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/5</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/---eb96a0afb6ba90a6.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">นายสืบสกุล สุประภากุล</h3>
+                <p class="text-red-600 font-bold">กิจกรรมกีฬาและสาธารณสุข</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/7</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/S__7798827.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ชญานิศ หุวสมิต</h3>
+                <p class="text-red-600 font-bold">กิจกรรมภายนอก</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/13</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/IMG_407928804fb4d3844903.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ณัฐญาภรณ์ ภานุโสภา</h3>
+                <p class="text-red-600 font-bold">กิจกรรมภายใน</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/4</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/---d324941ded77f4d7.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ชญาพร ลีลาคุณารักษ์</h3>
+                <p class="text-red-600 font-bold">กิจกรรมวิชาการ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/8</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/---d0028ca944e63145.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ฐิติชญา จัดเฮียม</h3>
+                <p class="text-red-600 font-bold">กิจกรรมศิลปวัฒนธรรม</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/7</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/123106.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ปภาดา จำปาหอม</h3>
+                <p class="text-red-600 font-bold">สถานที่</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/4</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/S__60006410.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ณัฎฐ์ภัสสร โพธิ์เทศ</h3>
+                <p class="text-red-600 font-bold">สถานที่</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/2</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----a808a6b465875750.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ชิชา ศรีมงคล</h3>
+                <p class="text-red-600 font-bold">สถานที่</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/2</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----0cedbd926ca9a3ba.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.นิรดา พันธ์ทอง</h3>
+                <p class="text-red-600 font-bold">ประชาสัมพันธ์ฯ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/5</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----e9aae5f32e725d76.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ภัทรวดี เลิศกระโทก</h3>
+                <p class="text-red-600 font-bold">ประชาสัมพันธ์ฯ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/6</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----35933af50d708faf.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.อริยา เพชรคุ้ม</h3>
+                <p class="text-red-600 font-bold">ประชาสัมพันธ์ฯ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/4</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/-----3113296438e9ef9e.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ช่อแก้ว แตงมณี</h3>
+                <p class="text-red-600 font-bold">พัสดุ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/14</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/---6019ff76da9113ca.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">นายสิรวิชญ์ ภู่ทองสุข</h3>
+                <p class="text-red-600 font-bold">พัสดุ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/5</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/----abba7b659e41ad5b.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.จานีน พันผูก</h3>
+                <p class="text-red-600 font-bold">ป้องกันยาเสพติดฯ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/14</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/-----1231f3573ed69866.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.นริศรา เล่าอุย</h3>
+                <p class="text-red-600 font-bold">สวัสดิการและงานทั่วไป</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/14</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/-----1e3ce1ae32d18cbf.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.สุธีรา เลี้ยงเจริญ</h3>
+                <p class="text-red-600 font-bold">สวัสดิการและงานทั่วไป</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/8</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----9ec1204918d30c86.png" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.เรณุกา ปรีดีขนิษฐ์</h3>
+                <p class="text-red-600 font-bold">สารสนเทศและออกแบบ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/9</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/IMG_4082.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.รุจีรัตน์ นามวิชา</h3>
+                <p class="text-red-600 font-bold">สารสนเทศและออกแบบ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/13</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img2.pic.in.th/-----599374d0a23966dd.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.พนัชกร คงอยู่</h3>
+                <p class="text-red-600 font-bold">สารสนเทศและออกแบบ</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/7</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----c8b29cd98fa915c5.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ณัชฐวิมล หงษ์พานิชกุล</h3>
+                <p class="text-red-600 font-bold">โสตทัศนูปกรณ์</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/4</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/-----308119057f14065c.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">น.ส.ลดา เนืองแก้ว</h3>
+                <p class="text-red-600 font-bold">โสตทัศนูปกรณ์</p>
+                <p class="text-gray-500 text-sm mb-2">ม.4/10</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/----7f7ae2d9eecb35c5.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">นายเติมพงศ์ วงศ์เชียงเพ็ง</h3>
+                <p class="text-red-600 font-bold">สารวัตรนักเรียน</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/5</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition flex flex-col items-center">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 overflow-hidden border-2 border-red-100">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/---e94a339c5256848a.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg">นายวรกณต์ บุญพันธ์</h3>
+                <p class="text-red-600 font-bold">สารวัตรนักเรียน</p>
+                <p class="text-gray-500 text-sm mb-2">ม.5/5</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+        <p>&copy; 2026 NMRSW Student Council.</p>
+    </footer>
+</body>
+</html>

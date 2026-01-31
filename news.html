@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข่าวสารและกิจกรรม | NMRSWSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> body { font-family: 'Kanit', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/happynewyear.png" 
+                             class="h-10 w-10 md:h-12 md:w-12 mr-3 object-contain" 
+                             alt="Logo">
+                        <span class="text-lg md:text-xl font-bold text-red-600 truncate max-w-[200px] md:max-w-none">
+                            NMRSW Student Council
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-red-600 transition">หน้าแรก</a>
+                    <a href="about.html" class="hover:text-red-600 transition">เกี่ยวกับเรา</a>
+                    <a href="news.html" class="hover:text-red-600 transition">ข่าวสาร</a>
+                    <a href="contact.html" class="hover:text-red-600 transition">ติดต่อเรา</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-100">
+           <a href="index.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">หน้าแรก</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">เกี่ยวกับเรา</a>
+            <a href="news.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ข่าวสาร</a>            
+            <a href="contact.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ติดต่อเรา</a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <main class="container mx-auto px-6 py-12 flex-grow">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4 md:mb-0">ข่าวสารและประชาสัมพันธ์</h1>
+            </div>
+
+        <div id="all-news-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </div>
+        
+        </main>
+
+    <script src="news-data.js"></script>
+    <script>
+        const newsContainer = document.getElementById('all-news-container');
+        
+        // วนลูปสร้างการ์ดข่าวจากข้อมูลทั้งหมด
+        newsData.forEach(news => {
+            const newsCard = `
+                <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-xl transition flex flex-col">
+                    <img src="${news.image}" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-white bg-red-600 px-2 py-1 rounded">${news.category}</span>
+                            <span class="text-xs text-gray-400">${news.date}</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 line-clamp-2">${news.title}</h3>
+                        <p class="mt-2 text-gray-600 text-sm line-clamp-2 mb-4">${news.summary}</p>
+                        <a href="news-detail.html?id=${news.id}" class="mt-auto inline-block text-red-600 font-semibold hover:underline">อ่านต่อ</a>
+                    </div>
+                </div>
+            `;
+            newsContainer.innerHTML += newsCard;
+        });
+    </script>
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+        <p>&copy; 2026 NMRSW Student Council.</p>
+    </footer>
+</body>
+</html>

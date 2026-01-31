@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลังเอกสาร | NMRSWSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> body { font-family: 'Kanit', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/happynewyear.png" 
+                             class="h-10 w-10 md:h-12 md:w-12 mr-3 object-contain" 
+                             alt="Logo">
+                        <span class="text-lg md:text-xl font-bold text-red-600 truncate max-w-[200px] md:max-w-none">
+                            NMRSW Student Council
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-red-600 transition">หน้าแรก</a>
+                    <a href="about.html" class="hover:text-red-600 transition">เกี่ยวกับเรา</a>
+                    <a href="news.html" class="hover:text-red-600 transition">ข่าวสาร</a>
+                    <a href="contact.html" class="hover:text-red-600 transition">ติดต่อเรา</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-100">
+           <a href="index.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">หน้าแรก</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">เกี่ยวกับเรา</a>
+            <a href="news.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ข่าวสาร</a>            
+            <a href="contact.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ติดต่อเรา</a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <main class="container mx-auto px-6 py-12 flex-grow">
+        <h1 class="text-3xl font-bold mb-2">คลังเอกสารและแบบฟอร์ม</h1>
+        <p class="text-gray-500 mb-8">ดาวน์โหลดเอกสารที่จำเป็นสำหรับนักเรียน</p>
+
+        <div class="bg-white shadow rounded-lg overflow-hidden mb-8">
+            <div class="bg-red-600 px-6 py-3 border-b">
+                <h2 class="text-lg font-bold text-white">📂 แบบฟอร์มทั่วไป (General Forms)</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-gray-50 text-gray-600 text-sm uppercase">
+                            <th class="px-6 py-3">ชื่อเอกสาร</th>
+                            <th class="px-6 py-3">ประเภท</th>
+                            <th class="px-6 py-3">วันที่อัปเดต</th>
+                            <th class="px-6 py-3 text-right">ดาวน์โหลด</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4">ใบลาป่วย / ลากิจ (สำหรับนักเรียน)</td>
+                            <td class="px-6 py-4"><span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">PDF</span></td>
+                            <td class="px-6 py-4">10 ม.ค. 69</td>
+                            <td class="px-6 py-4 text-right"><button class="text-red-600 hover:text-red-800 font-bold">Download</button></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">แบบฟอร์มขออนุญาตใช้สถานที่</td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">DOCX</span></td>
+                            <td class="px-6 py-4">12 ม.ค. 69</td>
+                            <td class="px-6 py-4 text-right"><button class="text-red-600 hover:text-red-800 font-bold">Download</button></td>
+                        </tr>
+                         <tr>
+                            <td class="px-6 py-4">เอกสารขอจัดตั้งชมรม</td>
+                            <td class="px-6 py-4"><span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">PDF</span></td>
+                            <td class="px-6 py-4">05 ม.ค. 69</td>
+                            <td class="px-6 py-4 text-right"><button class="text-red-600 hover:text-red-800 font-bold">Download</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="bg-gray-800 px-6 py-3 border-b">
+                <h2 class="text-lg font-bold text-white">📚 สรุปบทเรียน (Academic Resources)</h2>
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border rounded-lg p-4 flex items-center hover:bg-gray-50 transition cursor-pointer">
+                    <div class="text-3xl mr-4">📐</div>
+                    <div>
+                        <h3 class="font-bold">สรุปสูตรคณิตศาสตร์ ม.ปลาย</h3>
+                        <p class="text-sm text-gray-500">โดย ชมรมคณิตศาสตร์</p>
+                    </div>
+                </div>
+                <div class="border rounded-lg p-4 flex items-center hover:bg-gray-50 transition cursor-pointer">
+                    <div class="text-3xl mr-4">🧬</div>
+                    <div>
+                        <h3 class="font-bold">Short Note ชีววิทยา</h3>
+                        <p class="text-sm text-gray-500">โดย กน. ฝ่ายวิชาการ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+        <p>&copy; 2026 NMRSW Student Council.</p>
+    </footer>
+</body>
+</html>

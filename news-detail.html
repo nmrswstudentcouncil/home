@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดข่าว | NMRSWSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> body { font-family: 'Kanit', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+   <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/happynewyear.png" 
+                             class="h-10 w-10 md:h-12 md:w-12 mr-3 object-contain" 
+                             alt="Logo">
+                        <span class="text-lg md:text-xl font-bold text-red-600 truncate max-w-[200px] md:max-w-none">
+                            NMRSW Student Council
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-red-600 transition">หน้าแรก</a>
+                    <a href="about.html" class="hover:text-red-600 transition">เกี่ยวกับเรา</a>
+                    <a href="news.html" class="hover:text-red-600 transition">ข่าวสาร</a>
+                    <a href="contact.html" class="hover:text-red-600 transition">ติดต่อเรา</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-100">
+            <a href="index.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">หน้าแรก</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">เกี่ยวกับเรา</a>
+            <a href="news.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ข่าวสาร</a>            
+            <a href="contact.html" class="block py-3 px-6 text-gray-800 hover:bg-red-50 hover:text-red-600 font-medium">ติดต่อเรา</a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <main class="container mx-auto px-6 py-12 flex-grow max-w-4xl">
+        
+        <a href="news.html" class="inline-flex items-center text-gray-500 hover:text-red-600 mb-6 transition">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            กลับหน้ารวมข่าว
+        </a>
+
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-[400px] w-full relative">
+                <img id="detail-image" src="" class="w-full h-full object-cover" alt="รูปปกข่าว">
+                <div class="absolute top-4 left-4">
+                    <span id="detail-category" class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm"></span>
+                </div>
+            </div>
+
+            <div class="p-8 md:p-12">
+                <div class="flex items-center text-gray-500 text-sm mb-4">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span id="detail-date"></span>
+                    <span class="mx-2">•</span>
+                    <span>โดย คณะกรรมการนักเรียน</span>
+                </div>
+
+                <h1 id="detail-title" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight"></h1>
+
+                <div id="detail-content" class="prose max-w-none text-gray-700 leading-relaxed text-lg space-y-6">
+                    </div>
+            </div>
+        </article>
+
+        </main>
+
+    <script src="news-data.js"></script>
+    <script>
+        // 1. ดึงค่า ID จาก URL (เช่น news-detail.html?id=1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const newsId = parseInt(urlParams.get('id'));
+
+        // 2. ค้นหาข่าวใน newsData ที่มี id ตรงกัน
+        const currentNews = newsData.find(item => item.id === newsId);
+
+        // 3. ถ้าเจอข่าว ให้เอาข้อมูลไปใส่ในหน้าเว็บ
+        if (currentNews) {
+            document.title = currentNews.title + " | NMRSWSC";
+            document.getElementById('detail-image').src = currentNews.image;
+            document.getElementById('detail-category').innerText = currentNews.category;
+            document.getElementById('detail-date').innerText = currentNews.date;
+            document.getElementById('detail-title').innerText = currentNews.title;
+            document.getElementById('detail-content').innerHTML = currentNews.content;
+        } else {
+            // ถ้าไม่เจอข่าว (เช่น id มั่ว) ให้แสดงข้อความแจ้งเตือน หรือเด้งกลับหน้า news
+            document.querySelector('article').innerHTML = `<div class="p-10 text-center text-xl">ไม่พบเนื้อหาข่าวที่คุณต้องการ</div>`;
+        }
+    </script>
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+        <p>&copy; 2026 NMRSW Student Council.</p>
+    </footer>
+
+</body>
+</html>
