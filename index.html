@@ -127,21 +127,38 @@
 
     <script src="news-data.js"></script>
     <script>
-        // ดึงข่าวล่าสุด 1 ข่าว (ตัวแรกใน Array)
-        const latestNews = newsData[0]; 
+        const latestNewsList = newsData.slice(0, 3); 
         const container = document.getElementById('latest-news-container');
         
-        container.innerHTML = `
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full">
-                <img src="${latestNews.image}" class="w-full h-64 object-cover">
-                <div  class="p-6 flex-grow flex flex-col">
-                    <span class="text-xs font-bold text-red-600 uppercase mb-2">${latestNews.category}</span>
-                    <h3 class="text-xl font-bold mb-2">${latestNews.title}</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">${latestNews.summary}</p>
-                    <a href="news-detail.html?id=${latestNews.id}" class="mt-auto inline-block text-red-600 text-sm font-bold hover:underline">อ่านต่อ &rarr;</a>
+        let htmlContent = '';
+
+        latestNewsList.forEach(news => {
+            htmlContent += `
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full group">
+                    <div class="overflow-hidden h-64">
+                        <img src="${news.image}" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" alt="${news.title}">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-red-600 uppercase tracking-wider">${news.category}</span>
+                            <span class="text-xs text-gray-400">${news.date || ''}</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 line-clamp-2">
+                            <a href="news-detail.html?id=${news.id}" class="hover:text-red-600 transition">
+                                ${news.title}
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">${news.summary}</p>
+                        <a href="news-detail.html?id=${news.id}" class="mt-auto inline-flex items-center text-red-600 text-sm font-bold hover:underline">
+                            อ่านต่อ 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        });
+
+        container.innerHTML = htmlContent;
     </script>
 
     <footer class="bg-gray-900 text-white py-10 mt-auto">
