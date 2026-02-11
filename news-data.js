@@ -1,6 +1,6 @@
 const newsData = [
       {
-        id: 2,
+        id: 1,
         title: "วันอำลาช่อราชาวดี ปีการศึกษา 2568",
         category: "ประชาสัมพันธ์",
         date: "11 ม.ค. 69",
@@ -79,3 +79,4 @@ const newsData = [
     }
 
 ];
+
