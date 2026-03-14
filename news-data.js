@@ -4,7 +4,7 @@ const newsData = [
         title: "วันอำลาช่อราชาวดี ปีการศึกษา 2568",
         category: "ประชาสัมพันธ์",
         date: "11 ม.ค. 69",
-        image: "https://img5.pic.in.th/file/secure-sv1/Final5e6095018a8a5d18.png",
+        image: "https://img2.pic.in.th/Final0b1765e1aa39343e.png",
         summary: " ขอเชิญน้อง ๆ และเพื่อน ๆ ลูกนวมินทร์ 💌 มาร่วมถ่ายภาพแสดงความยินดีมาร่วมเก็บความทรงจำดีๆ ด้วยกันกับพี่มัธยมศึกษาปีที่ 6",
         content: `
             <p class="mb-6 text-lg text-gray-700">
@@ -36,7 +36,7 @@ const newsData = [
         title: "📖 เปิดสั่งจองหนังสือรุ่น (Yearbook) ",
         category: "ประชาสัมพันธ์",
         date: "31 ม.ค. 69",
-        image: "https://img5.pic.in.th/file/secure-sv1/IG-3-POST-PAKPAPGRABCOMING-1.png",
+        image: "https://img1.pic.in.th/images/IG-3-POST-PAKPAPGRABCOMING-1.png",
         summary: "หนังสือรุ่นเปิดให้สั่งจองแล้วตั้งแต่วันนี้ - 13 ก.พ. 69 มาร่วมเก็บความทรงจำดีๆ ด้วยกัน",
         content: `
             <p class="mb-6 text-lg text-gray-700">
